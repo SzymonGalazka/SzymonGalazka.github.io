@@ -46,8 +46,10 @@
             BABYLON.SceneLoader.ImportMesh("","/Assets/","S5.babylon",
             scene,function(newMeshes) {
                 newMeshes.forEach(function(mesh){
-                mesh.rotation = new BABYLON.Vector3(0,BABYLON.Tools.ToRadians(
-                    45),0);    
+                mesh.rotation = new BABYLON.Vector3(
+                    0,
+                    BABYLON.Tools.ToRadians(270),
+                    BABYLON.Tools.ToRadians(90);    
                 });
             });
 
