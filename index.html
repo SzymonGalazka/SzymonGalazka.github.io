@@ -36,7 +36,7 @@
             var camera = new BABYLON.ArcRotateCamera("arcCam",
                     BABYLON.Tools.ToRadians(0),
                     BABYLON.Tools.ToRadians(0),
-                    10.0,BABYLON.Vector3.Zero(),scene);
+                    30.0,BABYLON.Vector3.Zero(),scene);
             camera.attachControl(canvas,true);
             var light = new BABYLON.PointLight("PointLight",new BABYLON.Vector3(
             0,0,0),scene);
@@ -50,7 +50,6 @@
                     BABYLON.Tools.ToRadians(90),
                     BABYLON.Tools.ToRadians(270),
                     0);
-                mesh.scaling = new BABYLON.Vector3(2,2,2);
                 });
             });
 
