@@ -2,9 +2,9 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
-    <title>Babylon - Getting Started</title>
+    <title>Babylon - CV</title>
     <!--- link to the last version of babylon --->
-    <script src="babylon.js"></script>
+    <script src="http://www.babylonjs.com/babylon.js"></script>
     <style>
         html, body {
             overflow: hidden;
@@ -25,9 +25,11 @@
     <canvas id="renderCanvas"></canvas>
     <script>
             
-            var canvas = document.getElementById("renderCanvas");
+            var canvas = document.getElementById('renderCanvas');
             var engine = new BABYLON.Engine(canvas, true);
 
+            engine.enableOfflineSupport = false;
+        
             BABYLON.SceneLoader.Load("/Assets/","Wolf.obj", engine, function(scene){
                 scene.activeCamera.attachControl(canvas);
                 
