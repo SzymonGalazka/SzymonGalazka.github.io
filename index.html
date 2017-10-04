@@ -47,9 +47,9 @@
             scene,function(newMeshes) {
                 newMeshes.forEach(function(mesh){
                 mesh.rotation = new BABYLON.Vector3(
-                    0,
+                    BABYLON.Tools.ToRadians(90),
                     BABYLON.Tools.ToRadians(270),
-                    BABYLON.Tools.ToRadians(90));    
+                    0);    
                 });
             });
 
