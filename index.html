@@ -31,17 +31,16 @@
         var createScene = function(){
             var scene = new BABYLON.Scene(engine);
             scene.clearColor = new BABYLON.Color3(0.17,0.17,0.20);
-
-
+            
             var camera = new BABYLON.ArcRotateCamera("arcCam",
                     BABYLON.Tools.ToRadians(270),
                     BABYLON.Tools.ToRadians(90),
-                    7.0,BABYLON.Vector3.Zero(),scene);
+                    6.0,BABYLON.Vector3.Zero(),scene);
             camera.attachControl(canvas,true);
             var light = new BABYLON.PointLight("PointLight",new BABYLON.Vector3(
-            4,4,0),scene);
+            0,2,0),scene);
             light.parent = camera;
-            light.intensity = 2.5;
+            light.intensity = 1.5;
 
             BABYLON.SceneLoader.ImportMesh("","/Assets/","S5new.babylon",
 
