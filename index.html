@@ -31,7 +31,7 @@
         engine.enableOfflineSupport = false; // Dont require a manifest file
         var createScene = function(){
             var scene = new BABYLON.Scene(engine);
-            scene.clearColor = new BABYLON.Color3(0.17,0.17,0.20);
+            scene.clearColor = new BABYLON.Color3(0.18,0.18,0.20);
             
             var camera = new BABYLON.ArcRotateCamera("arcCam",
                     BABYLON.Tools.ToRadians(270),
@@ -39,7 +39,7 @@
                     6.0,BABYLON.Vector3.Zero(),scene);
             camera.attachControl(canvas,true);
             //deletes camera zooming
-            camera.lowerRadiusLimit = camera.upperRadiusLimit = camera.radius = 5;  
+            camera.lowerRadiusLimit = camera.upperRadiusLimit = camera.radius = 6;  
             var light = new BABYLON.PointLight("PointLight",new BABYLON.Vector3(
             0,2,0),scene);
             light.parent = camera;
