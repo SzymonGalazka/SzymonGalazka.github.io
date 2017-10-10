@@ -30,7 +30,7 @@
         engine.enableOfflineSupport = false; // Dont require a manifest file
         var createScene = function(){
             var scene = new BABYLON.Scene(engine);
-            scene.clearColor = new BABYLON.Color4.(0, 0, 0, 0);
+            scene.clearColor = new BABYLON.Color3(0.5, 0.8, 0.5);
 
 
             var camera = new BABYLON.ArcRotateCamera("arcCam",
