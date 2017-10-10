@@ -46,9 +46,10 @@
             light.intensity = 4.5;
             
             //CV
-            var screen = BABYLON.Mesh.CreateBox("screen", 6.0, scene);
+            
             //Smartphone
             BABYLON.SceneLoader.ImportMesh("","/Assets/","S5new.babylon",scene,function(newMeshes) {
+                var screen = BABYLON.Mesh.CreateBox("screen", 6.0, scene);
             /*    newMeshes.forEach(function(mesh){
                 mesh.rotation = new BABYLON.Vector3(
                     BABYLON.Tools.ToRadians(90),
