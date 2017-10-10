@@ -61,7 +61,7 @@
             var screenMaterial = new BABYLON.StandardMaterial("CV", scene);
             screen.material = screenMaterial;
             screenMaterial.diffuseTexture = new BABYLON.Texture("Assets/CV.jpg", scene);
-            
+            screenMaterial.specularPower = 2;
             return scene;
         }
 
