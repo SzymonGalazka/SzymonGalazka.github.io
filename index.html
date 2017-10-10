@@ -41,9 +41,9 @@
             //deletes camera zooming
             camera.lowerRadiusLimit = camera.upperRadiusLimit = camera.radius = 6;  
             var light = new BABYLON.PointLight("PointLight",new BABYLON.Vector3(
-            -3,-1,0),scene);
+            -3,-1,-3),scene);
             light.parent = camera;
-            light.intensity = 1.5;
+            light.intensity = 4.5;
             //Smartphone
             BABYLON.SceneLoader.ImportMesh("","/Assets/","S5new.babylon",scene,function(newMeshes) {
             /*    newMeshes.forEach(function(mesh){
@@ -54,7 +54,7 @@
                 }); */
             });
             //CV
-            
+            var box = BABYLON.Mesh.CreateBox("box", 6.0, scene);
             return scene;
         }
 
