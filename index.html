@@ -41,7 +41,7 @@
             //deletes camera zooming
             camera.lowerRadiusLimit = camera.upperRadiusLimit = camera.radius = 6;  
             var light = new BABYLON.PointLight("PointLight",new BABYLON.Vector3(
-            -3,-1,-3),scene);
+            -3,-1,-7),scene);
             light.parent = camera;
             light.intensity = 3.5;
             //Smartphone
@@ -57,7 +57,7 @@
             var screen = BABYLON.Mesh.CreateBox("screen", 2, scene);
             screen.scaling = new BABYLON.Vector3(1.06,2,0.03);
             screen.position.z=-0.03;
-            screen.position.x=0.03;
+            screen.position.x=-0.02;
             //CV
             var screenMaterial = new BABYLON.StandardMaterial("CV", scene);
             screen.material = screenMaterial;
