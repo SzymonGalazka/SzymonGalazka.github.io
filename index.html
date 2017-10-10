@@ -44,6 +44,9 @@
             -3,-1,-3),scene);
             light.parent = camera;
             light.intensity = 4.5;
+            
+            //CV
+            var box = BABYLON.Mesh.CreateBox("box", 6.0, scene);
             //Smartphone
             BABYLON.SceneLoader.ImportMesh("","/Assets/","S5new.babylon",scene,function(newMeshes) {
             /*    newMeshes.forEach(function(mesh){
@@ -53,8 +56,7 @@
                     0);
                 }); */
             });
-            //CV
-            var box = BABYLON.Mesh.CreateBox("box", 6.0, scene, false, BABYLON.Mesh.DEFAULTSIDE);
+            
             
             return scene;
         }
