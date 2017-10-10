@@ -56,12 +56,13 @@
             //screen
             var screen = BABYLON.Mesh.CreateBox("screen", 2, scene);
             screen.scaling = new BABYLON.Vector3(1.06,2,0.03);
-            screen.position.z=-0.03            
+            screen.position.z=-0.03;
+            screen.position.x=0.01;
             //CV
             var screenMaterial = new BABYLON.StandardMaterial("CV", scene);
             screen.material = screenMaterial;
             screenMaterial.diffuseTexture = new BABYLON.Texture("Assets/CV.jpg", scene);
-            screenMaterial.specularPower = 2;
+            screenMaterial.specularPower = 42;
             return scene;
         }
 
