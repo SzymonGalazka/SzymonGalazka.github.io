@@ -58,8 +58,10 @@
             screen.scaling = new BABYLON.Vector3(1.1,2,0.03);
             screen.position.z=-0.03            
             //CV
-            screen.material = new BABYLON.StandardMaterial("CV", scene);
-            CV.diffuseTexture = new BABYLON.Texture("Assets/CV.jpg", scene);
+            var screenMaterial = new BABYLON.StandardMaterial("CV", scene);
+            screen.material = screenMaterial;
+            screenMaterial.diffuseTexture = new BABYLON.Texture("Assets/CV.jpg", scene);
+            
             return scene;
         }
 
