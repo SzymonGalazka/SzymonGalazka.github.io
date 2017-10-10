@@ -30,7 +30,7 @@
         engine.enableOfflineSupport = false; // Dont require a manifest file
         var createScene = function(){
             var scene = new BABYLON.Scene(engine);
-            scene.clearColor = new BABYLON.Color3.White();
+            scene.clearColor = new BABYLON.Color4.(0, 0, 0, 0);
 
 
             var camera = new BABYLON.ArcRotateCamera("arcCam",
@@ -39,9 +39,9 @@
                     10.0,BABYLON.Vector3.Zero(),scene);
             camera.attachControl(canvas,true);
             var light = new BABYLON.PointLight("PointLight",new BABYLON.Vector3(
-            9,9,0),scene);
+            9,15,0),scene);
             light.parent = camera;
-            light.intensity = 1.5;
+            light.intensity = 2.5;
 
             BABYLON.SceneLoader.ImportMesh("","/Assets/","S5new.babylon",
 
