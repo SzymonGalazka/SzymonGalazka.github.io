@@ -1,8 +1,9 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
-    <title>Babylon - CV</title>
+    <title>Szymon Gałązka</title>
     <!--- link to the last version of babylon --->
+    <script src="hand.js"></script>
     <script src="babylon.js"></script>
     <style>
         html, body {
@@ -30,7 +31,7 @@
         engine.enableOfflineSupport = false; // Dont require a manifest file
         var createScene = function(){
             var scene = new BABYLON.Scene(engine);
-            scene.clearColor = new BABYLON.Color3(0.17,0.17,0.20);
+            scene.clearColor = new BABYLON.Color3(0.18,0.18,0.20);
             
             var camera = new BABYLON.ArcRotateCamera("arcCam",
                     BABYLON.Tools.ToRadians(270),
@@ -38,15 +39,18 @@
                     6.0,BABYLON.Vector3.Zero(),scene);
             camera.attachControl(canvas,true);
             //deletes camera zooming
-            canvas.removeEventListener('mousewheel', camera._wheel);canvas.removeEventListener('DOMMouseScroll', camera._wheel);
+            camera.lowerRadiusLimit = camera.upperRadiusLimit = camera.radius = 6;  
             var light = new BABYLON.PointLight("PointLight",new BABYLON.Vector3(
-            0,2,0),scene);
+            -3,-1,-3),scene);
             light.parent = camera;
-            light.intensity = 1.5;
-
-            BABYLON.SceneLoader.ImportMesh("","/Assets/","S5new.babylon",
-
-            scene,function(newMeshes) {
+            light.intensity = 4.5;
+            
+            //screen
+            var screen = BABYLON.Mesh.CreateBox("screen", 2, scene);
+            screen.scaling = new BABYLON.Vector3(1.1,2,0.03);
+            screen.position.z=-0.03
+            //Smartphone
+            BABYLON.SceneLoader.ImportMesh("","/Assets/","S5new.babylon",scene,function(newMeshes) {
             /*    newMeshes.forEach(function(mesh){
                 mesh.rotation = new BABYLON.Vector3(
                     BABYLON.Tools.ToRadians(90),
@@ -54,7 +58,8 @@
                     0);
                 }); */
             });
-
+            
+            
             return scene;
         }
 
