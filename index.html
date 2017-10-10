@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
-    <title>Babylon - CV</title>
+    <title>Szymon Gałązka</title>
     <!--- link to the last version of babylon --->
     <script src="hand.js"></script>
     <script src="babylon.js"></script>
@@ -46,7 +46,8 @@
             light.intensity = 4.5;
             
             //CV
-            var screen = BABYLON.Mesh.CreateBox("screen", 2.0, scene);
+            var screen = BABYLON.Mesh.CreateBox("screen", 1, scene);
+            screen.scaling = new BABYLON.Vector3(1.1,2,0.2);
             //Smartphone
             BABYLON.SceneLoader.ImportMesh("","/Assets/","S5new.babylon",scene,function(newMeshes) {
             /*    newMeshes.forEach(function(mesh){
