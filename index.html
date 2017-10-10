@@ -39,7 +39,7 @@
                     6.0,BABYLON.Vector3.Zero(),scene);
             camera.attachControl(canvas,true);
             //deletes camera zooming
-            canvas.removeEventListener('mousewheel', camera._wheel);canvas.removeEventListener('DOMMouseScroll', camera._wheel);
+            if (camera.radius > 6)    camera.radius = 6;if (camera.radius < 6)    camera.radius = 6;
             var light = new BABYLON.PointLight("PointLight",new BABYLON.Vector3(
             0,2,0),scene);
             light.parent = camera;
